@@ -5,7 +5,6 @@ import confetti from 'canvas-confetti';
 
 export default function WritePage() {
     const [text, setText] = React.useState<string | undefined>('');
-    const buttonRef = React.useRef(null);
 
     const handleAnimation = () => {
         confetti({
@@ -27,7 +26,7 @@ export default function WritePage() {
                 />
             </div>
             <button className='m-auto my-10 w-fit px-4 py-2 font-semibold text-sm border-none bg-green-100 rounded-xl hover:bg-green-200'
-                    ref={buttonRef}
+                    type='button'
                     onClick={handleAnimation}
             >
                 게시글 작성
